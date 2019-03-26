@@ -1,0 +1,3 @@
+#!/bin/bash
+
+killall -9 python ; killall -9 run.sh ; pmount /dev/datadump && echo "Mounting filesystem" && rsync -rlptD /home/ss/datadump/ /media/datadump/ && echo "Copying files" && pumount /dev/datadump && echo "Unmounting filesystem" && echo "Done."
